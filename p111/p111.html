@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>p111 API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>p111</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import numpy as np
+import matplotlib.pyplot as plt
+
+
+def matrix_multiplication(m_1, m_2):
+    &#34;&#34;&#34;Función para multiplicar matrices
+    
+    Args:
+        m_1(np.ndarray): Matriz 1, primer factor\n
+        m_2(np.ndarray): Matriz 2, segundo factor
+        
+    Returns:
+        m_3(np.ndarray): Matriz producto de m_1 y m_2&#34;&#34;&#34;
+    num_rows1, num_cols1 = m_1.shape
+    num_rows2, num_cols2 = m_2.shape
+    m_3 = np.ndarray(shape=(num_rows1, num_cols2), dtype=int)
+    if num_cols1 == num_rows2:
+        for i in range(0, num_rows1):
+            for z in range(0, num_cols2):
+                aux = 0
+                for j in range(0, num_rows2):
+                    aux += m_1[i][j] * m_2[j][z]
+                m_3[i][z] = aux
+        return (m_3)
+
+
+def rec_bb(t: list, f: int, l: int, key: int) -&gt; int:
+    &#34;&#34;&#34;Función recursiva de búsqueda binaria
+    
+    Args:
+        t(list): Lista donde se busca\n
+        f(int): Índice desde donde quieres buscar\n
+        l(int): Índice hasta el que buscar\n
+        key(int): Elemento a buscar
+
+    Returns:
+        (int): Index of key in t&#34;&#34;&#34;
+    if f &gt; l:
+        return
+    if f == l:
+        if key == t[f]:
+            return f
+        else:
+            return
+    mid = (f + l) // 2
+    if key == t[mid]:
+        return mid
+    elif key &lt; t[mid]:
+        return rec_bb(t, f, mid - 1, key)
+    else:
+        return rec_bb(t, mid + 1, l, key)
+
+
+def bb(t: list, f: int, l: int, key: int) -&gt; int:
+    &#34;&#34;&#34;Función iterativa de búsqueda binaria
+    
+    Args:
+        t(list): Lista donde se busca\n
+        f(int): Índice desde donde quieres buscar\n
+        l(int): Índice hasta el que buscar\n
+        key(int): Elemento a buscar
+
+    Returns:
+        (int): Index of key in t&#34;&#34;&#34;
+    while f &lt;= l:
+        mid = (f + l) // 2
+        if key == t[mid]:
+            return mid
+        elif key &lt; t[mid]:
+            l = mid - 1
+        else:
+            f = mid + 1
+
+
+def _l(i):
+    return 2 * i + 1
+
+
+def _r(i):
+    return 2 * i + 2
+
+
+def _p(i):
+    return (i - 1) // 2
+
+
+def min_heapify(h: np.ndarray, i: int):
+    &#34;&#34;&#34;Función que aplica el método heapify
+    
+    Args:
+        h(np.ndarray): Lista donde se aplica el método\n
+        i(int): Índice de la lista donde se aplica el método&#34;&#34;&#34;
+    swap = True
+
+    while swap:
+        minimum = i
+        l = _l(i)
+        r = _r(i)
+
+        if l &lt; len(h) and h[l] &lt; h[i]:
+            minimum = l
+        if r &lt; len(h) and h[r] &lt; h[minimum]:
+            minimum = r
+
+        if minimum != i:
+            h[i], h[minimum] = h[minimum], h[i]
+            i = minimum
+            swap = True
+        else:
+            swap = False
+
+
+def insert_min_heap(h: np.ndarray, k: int) -&gt; np.ndarray:
+    &#34;&#34;&#34;Inserta el elemento k en el min heap contenido eh h
+    y devuelve el nuevo min heap
+    
+    Args:
+        h(np.ndarray): Lista que contiene el min heap\n
+        k(int): Elemento a insertar
+        
+    Returns:
+        h(np.ndarray): Min heap con el elemento insertado&#34;&#34;&#34;
+    h = np.append(h, k)
+    i = len(h) - 1
+
+    while i &gt; 0 and h[_p(i)] &gt; h[i]:
+        h[_p(i)], h[i] = h[i], h[_p(i)]
+        i = _p(i)
+
+    return h
+
+
+def create_min_heap(h: np.ndarray):
+    &#34;&#34;&#34;Crea un min heap sobre el array de Numpy h de manera in-place
+    
+    Args:
+        h(np.ndarray): Lista donde crear el min heap&#34;&#34;&#34;
+    i = _p(len(h) - 1)
+    while i &gt; -1:
+        min_heapify(h, i)
+        i -= 1
+
+
+def pq_ini():
+    &#34;&#34;&#34;Inicializa una cola de prioridad vacía
+    
+    Returns:
+        pq(np.ndarray): La cola inicializada&#34;&#34;&#34;
+    pq = np.ndarray(shape=0, dtype=int)
+    return pq
+
+
+def pq_insert(h: np.ndarray, k: int) -&gt; np.ndarray:
+    &#34;&#34;&#34;Inserta el elemnto k en la cola de prioridad h y la devuelve
+    
+    Args:
+        h(np.ndarray): Lista que contiene la cola\n
+        k(int): Elemento a insertar
+
+    Returns:
+        h(np.ndarray): Cola con el elemento insertado&#34;&#34;&#34;
+    h = insert_min_heap(h, k)
+    return h
+
+
+def pq_remove(h: np.ndarray) -&gt; tuple[int, np.ndarray]:
+    &#34;&#34;&#34;Elimina el elemento con menor prioridad en h
+    y lo devuelve junto a la lista
+    
+    Args:
+        h(np.ndarray): Lista que contiene la cola
+        
+    Returns:
+        root(int): Elemento eliminado\n
+        h(np.ndarray): Lista modificada&#34;&#34;&#34;
+    if len(h) == 0:
+        h = np.ndarray(shape=(0))
+        return 0, h
+    root = h[0]
+    aux = h[len(h) - 1]
+    h = np.delete(h, len(h) - 1, 0)
+    if len(h):
+        h[0] = aux
+
+    min_heapify(h, 0)
+    return root, h
+
+
+def select_min_heap(h: np.ndarray, k: int) -&gt; int:
+    &#34;&#34;&#34;Devuelve el elemento en la posición k
+    si el min heap estuviese ordenado
+    
+    Args:
+        h(np.ndarray): Lista desordenada (min heap)\n
+        k(int): Posición a buscar si estuviese ordenado
+        
+    Returns:
+        (int): Elemento en la posición k&#34;&#34;&#34;
+    h2 = [i * 1 for i in h]
+    i = 0
+    create_min_heap(h2)
+    while i &lt; k - 1:
+        e, h2 = pq_remove(h2)
+        i += 1
+
+    return(h2[0])</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="p111.bb"><code class="name flex">
+<span>def <span class="ident">bb</span></span>(<span>t: list, f: int, l: int, key: int) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Función iterativa de búsqueda binaria</p>
+<h2 id="args">Args</h2>
+<p>t(list): Lista donde se busca</p>
+<p>f(int): Índice desde donde quieres buscar</p>
+<p>l(int): Índice hasta el que buscar</p>
+<p>key(int): Elemento a buscar</p>
+<h2 id="returns">Returns</h2>
+<p>(int): Index of key in t</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def bb(t: list, f: int, l: int, key: int) -&gt; int:
+    &#34;&#34;&#34;Función iterativa de búsqueda binaria
+    
+    Args:
+        t(list): Lista donde se busca\n
+        f(int): Índice desde donde quieres buscar\n
+        l(int): Índice hasta el que buscar\n
+        key(int): Elemento a buscar
+
+    Returns:
+        (int): Index of key in t&#34;&#34;&#34;
+    while f &lt;= l:
+        mid = (f + l) // 2
+        if key == t[mid]:
+            return mid
+        elif key &lt; t[mid]:
+            l = mid - 1
+        else:
+            f = mid + 1</code></pre>
+</details>
+</dd>
+<dt id="p111.create_min_heap"><code class="name flex">
+<span>def <span class="ident">create_min_heap</span></span>(<span>h: numpy.ndarray)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Crea un min heap sobre el array de Numpy h de manera in-place</p>
+<h2 id="args">Args</h2>
+<p>h(np.ndarray): Lista donde crear el min heap</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create_min_heap(h: np.ndarray):
+    &#34;&#34;&#34;Crea un min heap sobre el array de Numpy h de manera in-place
+    
+    Args:
+        h(np.ndarray): Lista donde crear el min heap&#34;&#34;&#34;
+    i = _p(len(h) - 1)
+    while i &gt; -1:
+        min_heapify(h, i)
+        i -= 1</code></pre>
+</details>
+</dd>
+<dt id="p111.insert_min_heap"><code class="name flex">
+<span>def <span class="ident">insert_min_heap</span></span>(<span>h: numpy.ndarray, k: int) ‑> numpy.ndarray</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Inserta el elemento k en el min heap contenido eh h
+y devuelve el nuevo min heap</p>
+<h2 id="args">Args</h2>
+<p>h(np.ndarray): Lista que contiene el min heap</p>
+<p>k(int): Elemento a insertar</p>
+<h2 id="returns">Returns</h2>
+<p>h(np.ndarray): Min heap con el elemento insertado</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def insert_min_heap(h: np.ndarray, k: int) -&gt; np.ndarray:
+    &#34;&#34;&#34;Inserta el elemento k en el min heap contenido eh h
+    y devuelve el nuevo min heap
+    
+    Args:
+        h(np.ndarray): Lista que contiene el min heap\n
+        k(int): Elemento a insertar
+        
+    Returns:
+        h(np.ndarray): Min heap con el elemento insertado&#34;&#34;&#34;
+    h = np.append(h, k)
+    i = len(h) - 1
+
+    while i &gt; 0 and h[_p(i)] &gt; h[i]:
+        h[_p(i)], h[i] = h[i], h[_p(i)]
+        i = _p(i)
+
+    return h</code></pre>
+</details>
+</dd>
+<dt id="p111.matrix_multiplication"><code class="name flex">
+<span>def <span class="ident">matrix_multiplication</span></span>(<span>m_1, m_2)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Función para multiplicar matrices</p>
+<h2 id="args">Args</h2>
+<p>m_1(np.ndarray): Matriz 1, primer factor</p>
+<p>m_2(np.ndarray): Matriz 2, segundo factor</p>
+<h2 id="returns">Returns</h2>
+<p>m_3(np.ndarray): Matriz producto de m_1 y m_2</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def matrix_multiplication(m_1, m_2):
+    &#34;&#34;&#34;Función para multiplicar matrices
+    
+    Args:
+        m_1(np.ndarray): Matriz 1, primer factor\n
+        m_2(np.ndarray): Matriz 2, segundo factor
+        
+    Returns:
+        m_3(np.ndarray): Matriz producto de m_1 y m_2&#34;&#34;&#34;
+    num_rows1, num_cols1 = m_1.shape
+    num_rows2, num_cols2 = m_2.shape
+    m_3 = np.ndarray(shape=(num_rows1, num_cols2), dtype=int)
+    if num_cols1 == num_rows2:
+        for i in range(0, num_rows1):
+            for z in range(0, num_cols2):
+                aux = 0
+                for j in range(0, num_rows2):
+                    aux += m_1[i][j] * m_2[j][z]
+                m_3[i][z] = aux
+        return (m_3)</code></pre>
+</details>
+</dd>
+<dt id="p111.min_heapify"><code class="name flex">
+<span>def <span class="ident">min_heapify</span></span>(<span>h: numpy.ndarray, i: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Función que aplica el método heapify</p>
+<h2 id="args">Args</h2>
+<p>h(np.ndarray): Lista donde se aplica el método</p>
+<p>i(int): Índice de la lista donde se aplica el método</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def min_heapify(h: np.ndarray, i: int):
+    &#34;&#34;&#34;Función que aplica el método heapify
+    
+    Args:
+        h(np.ndarray): Lista donde se aplica el método\n
+        i(int): Índice de la lista donde se aplica el método&#34;&#34;&#34;
+    swap = True
+
+    while swap:
+        minimum = i
+        l = _l(i)
+        r = _r(i)
+
+        if l &lt; len(h) and h[l] &lt; h[i]:
+            minimum = l
+        if r &lt; len(h) and h[r] &lt; h[minimum]:
+            minimum = r
+
+        if minimum != i:
+            h[i], h[minimum] = h[minimum], h[i]
+            i = minimum
+            swap = True
+        else:
+            swap = False</code></pre>
+</details>
+</dd>
+<dt id="p111.pq_ini"><code class="name flex">
+<span>def <span class="ident">pq_ini</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Inicializa una cola de prioridad vacía</p>
+<h2 id="returns">Returns</h2>
+<p>pq(np.ndarray): La cola inicializada</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pq_ini():
+    &#34;&#34;&#34;Inicializa una cola de prioridad vacía
+    
+    Returns:
+        pq(np.ndarray): La cola inicializada&#34;&#34;&#34;
+    pq = np.ndarray(shape=0, dtype=int)
+    return pq</code></pre>
+</details>
+</dd>
+<dt id="p111.pq_insert"><code class="name flex">
+<span>def <span class="ident">pq_insert</span></span>(<span>h: numpy.ndarray, k: int) ‑> numpy.ndarray</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Inserta el elemnto k en la cola de prioridad h y la devuelve</p>
+<h2 id="args">Args</h2>
+<p>h(np.ndarray): Lista que contiene la cola</p>
+<p>k(int): Elemento a insertar</p>
+<h2 id="returns">Returns</h2>
+<p>h(np.ndarray): Cola con el elemento insertado</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pq_insert(h: np.ndarray, k: int) -&gt; np.ndarray:
+    &#34;&#34;&#34;Inserta el elemnto k en la cola de prioridad h y la devuelve
+    
+    Args:
+        h(np.ndarray): Lista que contiene la cola\n
+        k(int): Elemento a insertar
+
+    Returns:
+        h(np.ndarray): Cola con el elemento insertado&#34;&#34;&#34;
+    h = insert_min_heap(h, k)
+    return h</code></pre>
+</details>
+</dd>
+<dt id="p111.pq_remove"><code class="name flex">
+<span>def <span class="ident">pq_remove</span></span>(<span>h: numpy.ndarray) ‑> tuple[int, numpy.ndarray]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Elimina el elemento con menor prioridad en h
+y lo devuelve junto a la lista</p>
+<h2 id="args">Args</h2>
+<p>h(np.ndarray): Lista que contiene la cola</p>
+<h2 id="returns">Returns</h2>
+<p>root(int): Elemento eliminado</p>
+<p>h(np.ndarray): Lista modificada</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pq_remove(h: np.ndarray) -&gt; tuple[int, np.ndarray]:
+    &#34;&#34;&#34;Elimina el elemento con menor prioridad en h
+    y lo devuelve junto a la lista
+    
+    Args:
+        h(np.ndarray): Lista que contiene la cola
+        
+    Returns:
+        root(int): Elemento eliminado\n
+        h(np.ndarray): Lista modificada&#34;&#34;&#34;
+    if len(h) == 0:
+        h = np.ndarray(shape=(0))
+        return 0, h
+    root = h[0]
+    aux = h[len(h) - 1]
+    h = np.delete(h, len(h) - 1, 0)
+    if len(h):
+        h[0] = aux
+
+    min_heapify(h, 0)
+    return root, h</code></pre>
+</details>
+</dd>
+<dt id="p111.rec_bb"><code class="name flex">
+<span>def <span class="ident">rec_bb</span></span>(<span>t: list, f: int, l: int, key: int) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Función recursiva de búsqueda binaria</p>
+<h2 id="args">Args</h2>
+<p>t(list): Lista donde se busca</p>
+<p>f(int): Índice desde donde quieres buscar</p>
+<p>l(int): Índice hasta el que buscar</p>
+<p>key(int): Elemento a buscar</p>
+<h2 id="returns">Returns</h2>
+<p>(int): Index of key in t</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def rec_bb(t: list, f: int, l: int, key: int) -&gt; int:
+    &#34;&#34;&#34;Función recursiva de búsqueda binaria
+    
+    Args:
+        t(list): Lista donde se busca\n
+        f(int): Índice desde donde quieres buscar\n
+        l(int): Índice hasta el que buscar\n
+        key(int): Elemento a buscar
+
+    Returns:
+        (int): Index of key in t&#34;&#34;&#34;
+    if f &gt; l:
+        return
+    if f == l:
+        if key == t[f]:
+            return f
+        else:
+            return
+    mid = (f + l) // 2
+    if key == t[mid]:
+        return mid
+    elif key &lt; t[mid]:
+        return rec_bb(t, f, mid - 1, key)
+    else:
+        return rec_bb(t, mid + 1, l, key)</code></pre>
+</details>
+</dd>
+<dt id="p111.select_min_heap"><code class="name flex">
+<span>def <span class="ident">select_min_heap</span></span>(<span>h: numpy.ndarray, k: int) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Devuelve el elemento en la posición k
+si el min heap estuviese ordenado</p>
+<h2 id="args">Args</h2>
+<p>h(np.ndarray): Lista desordenada (min heap)</p>
+<p>k(int): Posición a buscar si estuviese ordenado</p>
+<h2 id="returns">Returns</h2>
+<p>(int): Elemento en la posición k</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def select_min_heap(h: np.ndarray, k: int) -&gt; int:
+    &#34;&#34;&#34;Devuelve el elemento en la posición k
+    si el min heap estuviese ordenado
+    
+    Args:
+        h(np.ndarray): Lista desordenada (min heap)\n
+        k(int): Posición a buscar si estuviese ordenado
+        
+    Returns:
+        (int): Elemento en la posición k&#34;&#34;&#34;
+    h2 = [i * 1 for i in h]
+    i = 0
+    create_min_heap(h2)
+    while i &lt; k - 1:
+        e, h2 = pq_remove(h2)
+        i += 1
+
+    return(h2[0])</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="p111.bb" href="#p111.bb">bb</a></code></li>
+<li><code><a title="p111.create_min_heap" href="#p111.create_min_heap">create_min_heap</a></code></li>
+<li><code><a title="p111.insert_min_heap" href="#p111.insert_min_heap">insert_min_heap</a></code></li>
+<li><code><a title="p111.matrix_multiplication" href="#p111.matrix_multiplication">matrix_multiplication</a></code></li>
+<li><code><a title="p111.min_heapify" href="#p111.min_heapify">min_heapify</a></code></li>
+<li><code><a title="p111.pq_ini" href="#p111.pq_ini">pq_ini</a></code></li>
+<li><code><a title="p111.pq_insert" href="#p111.pq_insert">pq_insert</a></code></li>
+<li><code><a title="p111.pq_remove" href="#p111.pq_remove">pq_remove</a></code></li>
+<li><code><a title="p111.rec_bb" href="#p111.rec_bb">rec_bb</a></code></li>
+<li><code><a title="p111.select_min_heap" href="#p111.select_min_heap">select_min_heap</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
