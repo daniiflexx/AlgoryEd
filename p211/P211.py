@@ -110,8 +110,8 @@ def exhaustive_tsp(dist_m: np.ndarray)-> list:
     longitud = sys.maxsize
     for circuit in p:
         circuit = list(circuit)
-        aux = len_circuit(circuit, dist_m)
         circuit.append(circuit[0])
+        aux = len_circuit(circuit, dist_m)
         if aux < longitud:
             longitud = aux
             circuito = list(circuit)
