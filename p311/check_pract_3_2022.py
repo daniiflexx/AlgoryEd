@@ -7,9 +7,9 @@ import textwrap
 
 import numpy as np
 
-import p311 as p1
+import P311 as p3
   
-####################################### main
+###################################### main
 def main(size, shift):
     """Comprobador de practica 3.
     
@@ -102,12 +102,12 @@ if __name__ == '__main__':
                 str_comm = "mv p3" + args.pareja + ".py  ./pract3.py"
                 print(str_comm)
                 os.system(str_comm)
-                import p311 as p3
+                #import pract3 as p3
             else:
                 sys.exit("file {0:s} not found".format(f_path))
         
         else:
-            import p311 as p3
+            import P311 as p3
             
         main(args.size, args.shift)
     

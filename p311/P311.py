@@ -1,8 +1,8 @@
-
 import time
 import numpy as np
-import itertools
-from typing import List, Tuple, Dict, Callable, Iterable, Union
+import matplotlib.pyplot as plt
+
+from typing import List, Tuple, Dict, Callable, Union
 
 def split(t: List) -> tuple[List, int, List]:
     """ Función que devuelve una tupla con las listas de elementos menores y mayores que el pivote, además del pivote
@@ -157,3 +157,89 @@ def qsort_5(t: np.ndarray)-> np.ndarray:
     t_left = np.append(t_left, np.array([mid]))
 
     return np.append(t_left, t_right)
+
+def edit_distance(str_1: str, str_2: str)-> int:
+	"""Función que devuelve el mínimo número de cambios para convertir str1 en str2
+    Args:
+        str_1: primera palabra
+		str_2: segunda palabra
+    Returns: 
+        dist_matrix[n_rows - 1][n_columns - 1]: número mínimo de cambios
+    """
+	n_rows, n_columns = 1+len(str_1), 1+len(str_2)
+
+	dist_matrix = np.zeros((n_rows, n_columns)).astype(int)
+	dist_matrix[0] = np.arange(n_columns).astype(int)
+	dist_matrix[ : , 0] = np.arange(n_rows).astype(int)
+
+	for i in range(1, n_rows):
+		for j in range(1, n_columns):
+			if str_1[i-1] == str_2[j-1]:
+				dist_matrix[i, j] = dist_matrix[i-1, j-1]
+			else:
+				dist_matrix[i, j] = 1 + min(dist_matrix[i-1, j-1], dist_matrix[i-1, j], dist_matrix[i, j-1])
+
+	return dist_matrix[n_rows - 1][n_columns - 1]
+
+def max_subsequence_length(str_1: str, str_2: str)-> int:
+	"""Función que devuelve la longitud de la máxima subsequencia común entre str1 y str2
+    Args:
+        str_1: primera palabra
+		str_2: segunda palabra
+    Returns: 
+        e[len(str_1), len(str_2)]: longitud de la subsequencia
+    """
+	e = np.zeros((len(str_1)+1, len(str_2)+1), dtype=int)
+    
+	for i in range(1, len(str_1)+1):
+		for j in range(1, len(str_2)+1):
+			if (str_1[i-1] == str_2[j-1]):
+				e[i,j] = 1 + e[i-1, j-1]    
+			else :
+				e[i, j] = max(e[i-1, j], e[i, j-1])
+	return e[len(str_1), len(str_2)]
+
+def max_common_subsequence(str_1: str, str_2: str)-> str:
+	"""Función que devuelve la máxima subsequencia común entre str1 y str2
+    Args:
+        str_1: primera palabra
+		str_2: segunda palabra
+    Returns: 
+       	word: subsequencia
+    """
+	e = np.zeros((len(str_1)+1, len(str_2)+1), dtype=int)
+	word = ""
+	z = 0
+    
+	for i in range(1, len(str_1)+1):
+		for j in range(1, len(str_2)+1):
+			if (str_1[i-1] == str_2[j-1]):
+				if e[i-1, j-1] == z:
+					z += 1
+					word += str_1[i-1]
+				e[i,j] = 1 + e[i-1, j-1]    
+			else :
+				e[i, j] = max(e[i-1, j], e[i, j-1])
+	return word
+
+def min_mult_matrix(l_dims: List[int])-> int:
+    """Función que devuelve el mínimo número de productos para multiplicar n matrices
+    Args:
+        l_dims (List[int]): lista con las dimensiones de las matrices
+    Returns: 
+        m: número de productos
+    """
+    m = np.inf * np.ones((len(l_dims)-1, len(l_dims)-1))
+    np.fill_diagonal(m, 0)
+
+    x = len(l_dims) - 1
+
+    for j in range(0, x-1):
+        m[j, j+1] = l_dims[j] * l_dims[j+1] * l_dims[j+2]
+
+    for a in range(2, x):
+        for b in range(x-a):
+            for c in range(b, b+a):
+                m[b, b+a] = min(m[b, b+a], l_dims[b] * l_dims[c+1] * l_dims[b+a+1] + m[b, c] + m[c+1, a+b])
+
+    return m	
